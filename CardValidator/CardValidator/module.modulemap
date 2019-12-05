@@ -1,0 +1,5 @@
+framework module CardValidator {
+    umbrella header "CardValidator.h"
+    export *
+    module * { export * }
+}
