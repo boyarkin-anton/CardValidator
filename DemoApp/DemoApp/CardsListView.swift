@@ -50,7 +50,7 @@ struct CardsListView: View {
                 }.pickerStyle(SegmentedPickerStyle())
                 
                 ForEach(self.validator.filter(list: self.content, validity: self.filterData.validity, network: self.filterData.type).map { Item(content: $0) }) { item in
-                    NavigationLink(destination: CardDetails(card: item.content).environmentObject(CardData())) {
+                    NavigationLink(destination: CardDetailsView(card: item.content).environmentObject(CardData())) {
                         CardRow(card: item.content)
                     }
                 }
